@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 500px;
+  border-bottom: 15px solid #DD4D2F;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: url(images/bg-5.jpg);
+  background-size: cover;
+  background-position: bottom;
+  
+}
+
+.pipe {
+  position: absolute;
+  bottom: -5px;
+  width: 80px;
+  animation: pipe-animation 2.5s infinite linear;
+  -webkit-filter: drop-shadow(1px 3px 1px #424242);
+    filter: drop-shadow(1px 3px 1px #424242); 
+}
+
+.cuphead {
+  width: 120px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  position: absolute;
+  width: 520px;
+  animation: clouds-animation 10s infinite linear;
+}
+@keyframes pipe-animation {
+  from {
+   right: -80px;
+  }
+  to {
+   right: 100%;
+  }
+}
+
+@keyframes jump {
+  0%{
+    bottom: 0px;
+  }
+  40% {
+    bottom: 180px;
+  }
+  50% {
+    bottom: 180px;
+  }
+  60% {
+    bottom: 180px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clouds-animation {
+  from{
+    right: -520px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
